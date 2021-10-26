@@ -1,7 +1,20 @@
-public class HelloWorld
+public class ReverseRecurse
 {
-	public static void main(String[]args)
-	{
-		System.out.println("Hello World");
-	}
+  public static String reverse(String s) 
+  {
+    System.out.println(s);
+    if(s.equals(""))
+    {
+      return s;
+    } 
+    else 
+    {
+      return s.charAt(s.length()-1)+reverse(s.substring(0,s.length()-1));
+    }
+  }
+  public static void main(String[] args) 
+  {
+    System.out.println("Sequence of the method calls to reverse that the application makes if the user inputs 'RECURSE':");
+    System.out.println(reverse("RECURSE"));
+  }
 }
