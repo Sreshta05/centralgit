@@ -18,3 +18,28 @@ public class ReverseRecurse
     System.out.println(reverse("RECURSE"));
   }
 }
+import java.util.Scanner;
+
+public class ReverseString 
+{
+  public static String reverse(String s) 
+  {
+    if(s.equals(""))
+    {
+      return s;
+    } 
+    else 
+    {
+      return s.charAt(s.length()-1)+reverse(s.substring(0,s.length()-1));
+    }
+  }
+  
+  public static void main(String[] args) 
+  {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Enter a String to Reverse: ");
+    String s = scan.nextLine();
+    System.out.println("The Reversed String: "+reverse(s));
+  }
+
+}
